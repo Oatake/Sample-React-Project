@@ -1,5 +1,5 @@
 import React from 'react'
-export default function App() {
+export default function Page1() {
 
     const logo = "https://picsum.photos/500/500";
     const contextMain = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ";
