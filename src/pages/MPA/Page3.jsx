@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function App() {
+export default function Page3() {
 
     const logo = "https://picsum.photos/500/500";
     const nameOfLabel1 = "Password"

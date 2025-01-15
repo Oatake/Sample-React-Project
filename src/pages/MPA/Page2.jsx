@@ -1,9 +1,16 @@
 import React from 'react'
-export default function App() {
+import { useNavigate } from 'react-router-dom';
 
+export default function Page2() {
+
+    let navigate = useNavigate()
     const logo = "https://picsum.photos/500/500";
     const nameOfLabel = "Username / E-mail / Phone"
     const buttonName = "Continue"
+
+    const handleOnClick = () => {
+        navigate("/mpa/3")
+    }
 
     return (
         <div className='min-h-screen bg-red-500 flex flex-col justify-center items-center'>
@@ -20,7 +27,7 @@ export default function App() {
                     </div>
                 </div>
                 <div className='text-[1vw] font-bold flex justify-center'>
-                    <button className='bg-slate-300 py-3 px-5'>{buttonName}</button>
+                    <button onClick={handleOnClick} className='bg-slate-300 py-3 px-5'>{buttonName}</button>
                 </div>
             </div>
         </div>

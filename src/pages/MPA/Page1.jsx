@@ -1,11 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 export default function Page1() {
 
+    let navigate = useNavigate()
     const logo = "https://picsum.photos/500/500";
     const contextMain = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ";
     const contextSup = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ";
     const buttonName = "GET STARTED"
     const listOptionLogin = [1, 2, 3, 4];
+
+    const handleOnClick = () => {
+        navigate("/mpa/2")
+    }
 
     return (
         <div className='min-h-screen bg-red-500 flex flex-col justify-center items-center'>
@@ -18,7 +24,7 @@ export default function Page1() {
                     <div className='text-[1.5vw] font-semibold'>{contextSup}</div>
                 </div>
                 <div className='text-[1vw] font-bold flex justify-center'>
-                    <button className='bg-slate-300 py-3 px-5'>{buttonName}</button>
+                    <button onClick={handleOnClick} className='bg-slate-300 py-3 px-5'>{buttonName}</button>
                 </div>
                 <div className='text-[1vw] font-bold'>or</div>
                 <div className='flex flex-row gap-10 '>
